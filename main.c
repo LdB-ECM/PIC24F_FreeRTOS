@@ -79,7 +79,10 @@ static void PIC_init(void)
     ANSB = 0;
     ANSC = 0;
     
-    
+    _TRISC3 = 0;        // assign RC3 to output for HeartBeat LED
+    _RC3 = 1;           // Turn on output
+    _LATC3 = 1;         // Turn on heartbeat
+	
     SET_IOLOCK();
  
 }
